@@ -1,0 +1,38 @@
+A = []
+B = []
+z = 0
+result = []
+print("Enter values for matrix - A")
+row = int(input("Number of rows, m = "))
+col = int(input("Number of columns, n = "))
+for i in range(row):
+	x=[]
+	for j in range(col):
+		print("Entry in row: "+str(i+1)+" column: "+str(j+1))
+		y = (int(input()))
+		x.append(y)
+	A.append(x)
+print("Enter values for matrix - B")
+rowB = int(input("Number of rows, m = "))
+colB = int(input("Number of columns, n = "))
+for i in range(rowB):
+	x=[]
+	for j in range(colB):
+		print("Entry in row: "+str(i+1)+ " column: "+str(j+1))
+		y = (int(input()))
+		x.append(y)
+	B.append(x)
+result=[]	
+for i in range(1,row+1):
+	x=[]
+	for j in range(1,colB+1):
+		x.append(0)
+	result.append(x)
+	
+for i in range(len(A)):
+	for j in range(len(B[0])):
+		for k in range(len(B)):
+			result[i][j] += A[i][k] * B[k][j]
+print("Matrix - A =",A)
+print("Matrix - B =",B)
+print("Matrix - A * Matrix- B =",result)
