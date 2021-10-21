@@ -1,0 +1,6 @@
+list1 = input("Enter input list 1: ")
+data1=list1.split(" ")
+list2 = input("Enter input list 2: ")
+data2=list2.split(" ")
+print("Result of comparing two lists: ",list1==list2)
+print("Result of comparision of two ids: ",id(list1)==id(list2))
