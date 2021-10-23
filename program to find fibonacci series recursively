@@ -1,0 +1,14 @@
+def recfib(n):
+	if(n <= 1):
+		return n
+	else:
+		return(recfib(n-1) + recfib(n - 2))
+n = int(input("Enter the fibonacci term to be printed: "))
+if(n <= 0):
+	print("Invalid input")
+else:
+	print("Fibonacci Series is: ")
+for i in range(n):
+	print(recfib(i), end=' ')
+	if i == n-1:
+		print("\n")
